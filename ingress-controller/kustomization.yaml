@@ -3,10 +3,10 @@ kind: Kustomization
 namespace: projectcontour
 
 commonLabels:
-  env: dev
-  cloud: kind
-  region: localhost # cloud provider region
-  deployment: local
+  env: dev                # env usually one of dev, test or prod
+  cloud: kind             # typically aws, gcp, azure ..etc
+  region: localhost       # cloud provider region
+  deployment: local       # deployment instance ex. staging, prod-1, prod-2...
 
 resources:
   - ./contour.yaml
